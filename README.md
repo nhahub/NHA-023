@@ -1,164 +1,144 @@
-User Housing Preferences Analysis Project
-Azura PowerPI
-Tools and Technology
-Layer / Purpose	Technology Used
-Data Ingestion	Azure Data Factory (ADF)
-Data Storage	Azure Data Lake Storage Gen2
-Data Processing	Azure Databricks (PySpark)
-Data Visualization	Microsoft Power BI
-Technical Architecture
+# 🏡 User Housing Preferences Analysis Project  
+### Azura PowerPI
 
-This project follows a modern Medallion Data Architecture (Bronze → Silver → Gold) implemented entirely on Microsoft Azure.
+A complete end-to-end Azure data engineering project analyzing Airbnb housing patterns using a modern **Medallion Architecture** and delivering insights through a fully interactive **Power BI dashboard**.
 
-We first collected Airbnb housing data through web scraping, then processed it using a structured data pipeline.
+---
 
-1. Bronze Layer — Raw Data Collection
+## 🚀 Tools and Technology
 
-In this stage:
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Data Ingestion** | Azure Data Factory (ADF) | Pipeline Orchestration |
+| **Data Storage** | Azure Data Lake Storage Gen2 | Bronze / Silver / Gold Layers |
+| **Data Processing** | Azure Databricks (PySpark) | Cleaning, Transformation, Aggregation |
+| **Data Visualization** | Microsoft Power BI | Dashboard & Analytics |
 
-Raw Airbnb data was scraped from the website.
+---
 
-Data included listings, host profiles, pricing, location metadata, and availability calendars.
+# 🏗️ Technical Architecture
 
-Azure Data Factory (ADF) pipelines ingested this data.
+This project follows a structured **Bronze → Silver → Gold** pipeline implemented on Microsoft Azure.  
+Data was first collected through **web scraping** from Airbnb, then refined and visualized.
 
-Data was stored exactly as collected in Azure Data Lake Storage Gen2.
+---
 
-No transformations, cleaning, or validations were applied.
+# 🥉 1. Bronze Layer — Raw Data Collection
 
-Purpose: Store untouched raw data from the source.
+- Raw Airbnb data was collected via **web scraping**.  
+- Data included: listings, hosts, pricing, location metadata, availability calendars.  
+- Ingested into Azure Data Lake Storage Gen2 using **Azure Data Factory**.  
+- Stored exactly as received (no cleaning or transformation).
 
-2. Silver Layer — Data Cleaning & Standardization
+**🎯 Goal:** Preserve original source data.
 
-In the Silver layer we used Azure Databricks (PySpark) to process and clean the previously scraped Airbnb data.
+---
 
-Key cleaning and transformation actions:
+# 🥈 2. Silver Layer — Data Cleaning & Standardization
 
-Removing duplicates
+Using **Azure Databricks + PySpark**, raw data was transformed into a clean dataset.
 
-Handling missing or invalid values
+### Actions:
+- Remove duplicates  
+- Handle missing/invalid values  
+- Standardize column names  
+- Normalize schema  
+- Join related datasets (listings, host details, pricing, etc.)  
+- Enforce consistency across all tables  
 
-Standardizing column names
+**🎯 Goal:** Produce analytics-ready data.
 
-Normalizing schema formats
+---
 
-Joining related datasets (listings, hosts, reviews, pricing, etc.)
+# 🥇 3. Gold Layer — Curated Dataset for Power BI
 
-Enforcing dataset consistency
+Final modeling layer optimized for Power BI.
 
-Purpose: Create a reliable and analytics-ready dataset.
+### Includes:
+- Aggregated metrics (avg. price, occupancy rate, monthly reviews)  
+- Host performance metrics  
+- Location-based insights  
+- Star-schema optimized tables  
 
-3. Gold Layer — Curated Dataset for Analytics
+**🎯 Goal:** Provide clean, structured data for dashboards & analysis.
 
-The Gold layer contains the final refined dataset used for Power BI dashboards.
+---
 
-Transformations included:
+# 📊 Airbnb Data Analytics Dashboard
 
-Creating aggregated metrics (average price, occupancy rate, review activity)
+An interactive dashboard to explore Airbnb market data across cities.
 
-Generating city-level and location-based insights
+---
 
-Structuring tables optimized for Power BI models
+## 🌍 1. Geographic Distribution of Listings
+- Map visualizing listing locations  
+- Marker **size & color** reflect price  
+- Helps identify high-cost and low-cost zones  
 
-Preparing curated data marts for analysis
+---
 
-Purpose: Provide clean, structured, analysis-ready data for visualization and reporting.
+## 💲 2. Price Distribution Analysis
+A histogram showing:
+- The price range of listings  
+- Common pricing tiers  
+- Market outliers  
 
-Airbnb Data Analytics Dashboard
+---
 
-An interactive Power BI dashboard that analyzes Airbnb markets across different cities.
-Users can select a city and explore:
+## 🏘️ 3. Property Type Market Composition
+Visual breakdown of property categories:
+- Entire homes  
+- Private rooms  
+- Shared spaces  
+- Apartments, studios, etc.  
 
-Pricing trends
+---
 
-Listing availability
+## 📈 4. Guest Booking Activity
+Box plot showing:
+- Monthly reviews as a booking activity indicator  
+- Typical engagement levels  
+- Outlier listings with high customer activity  
 
-Market composition
+---
 
-Geographic distribution
+## ⚡ 5. Quick Market Summary
+Provides a snapshot of selected city insights:
 
-Guest engagement metrics
+- **Average nightly price**  
+- **Average monthly reviews**  
+- **Market activity level**  
 
-Personalized AI-powered recommendations
+_Example_:  
+Albany has an average price of **$111** and ~**2 reviews/month** → **Moderate activity**.
 
-Designed for hosts, analysts, and decision-makers to quickly understand market behavior.
+---
 
-Dashboard Features
-1. Geographic Distribution of Listings
+## 🤖 6. Personalized AI Recommendation
+AI tool that generates hosting advice based on:
+- Age  
+- Gender  
+- Hosting experience  
 
-Interactive map of listings showing:
+Helps users make smarter hosting decisions.
 
-Location
+---
 
-Pricing (reflected by marker size and color)
+# 👥 Authors
 
-2. Price Distribution Analysis
+- **Omar Farag**  
+- **Bassem Ahmed**  
+- **Rana Ehab**  
+- **Mohamed Mosad**
 
-Histogram visualizing nightly price ranges:
+---
 
-Identifies common pricing tiers
+## 📎 Want Extras?
+If needed, I can generate:
 
-Highlights market outliers
+- 📄 A styled PDF version  
+- 🎤 A complete PowerPoint presentation  
+- 📁 A suggested GitHub folder structure  
+- 🧩 A project logo / cover image  
 
-3. Property Type Market Composition
-
-Pie or bar chart showing:
-
-Apartments
-
-Houses
-
-Shared rooms
-
-Studios
-
-Other property types
-
-Gives insight into market supply structure.
-
-4. Guest Booking Activity
-
-Box plot illustrating:
-
-Monthly review frequency per listing
-
-Typical engagement level
-
-Outliers with unusually high activity
-
-Used as a proxy for booking demand.
-
-5. Quick Market Summary
-
-A fast overview of the selected city’s Airbnb market:
-
-Average nightly price
-
-Average monthly reviews
-
-Market activity level
-
-Example:
-Albany’s average price ≈ $111, with ~2 reviews per month, showing moderate guest activity.
-
-6. Personalized AI Recommendation
-
-A user-input tool that generates hosting recommendations based on:
-
-Age
-
-Gender
-
-Hosting experience
-
-Helps guide new or existing hosts with AI-powered insights.
-
-Authors
-
-Omar Farag
-
-Bassem Ahmed
-
-Rana Ehab
-
-Mohamed Mosad
+Just tell me!
