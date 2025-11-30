@@ -18,6 +18,8 @@ A complete end-to-end Azure data engineering project analyzing Airbnb housing pa
 
 # 🏗️ Technical Architecture
 
+![1](https://github.com/user-attachments/assets/0eec3b6e-2b22-49df-9337-986d5055d05c)
+
 This project follows a structured **Bronze → Silver → Gold** pipeline implemented on Microsoft Azure.  
 Data was first collected through **web scraping** from Airbnb, then refined and visualized.
 
@@ -62,18 +64,28 @@ Final modeling layer optimized for Power BI.
 
 **🎯 Goal:** Provide clean, structured data for dashboards & analysis.
 
+![1](https://github.com/user-attachments/assets/33f49748-b6ef-4faf-baa7-d1c4648e59f4)
+
+
 ---
 
 # 📊 Airbnb Data Analytics Dashboard
 
 An interactive dashboard to explore Airbnb market data across cities.
 
+![6](https://github.com/user-attachments/assets/e8d281bb-895b-4066-ae1a-e04187ed7928)
+
+
+
 ---
 
 ## 🌍 1. Geographic Distribution of Listings
 - Map visualizing listing locations  
 - Marker **size & color** reflect price  
-- Helps identify high-cost and low-cost zones  
+- Helps identify high-cost and low-cost zones
+
+- ![8](https://github.com/user-attachments/assets/e793d9ae-cabb-4f0f-a9a8-59b853b74499)
+
 
 ---
 
@@ -81,7 +93,10 @@ An interactive dashboard to explore Airbnb market data across cities.
 A histogram showing:
 - The price range of listings  
 - Common pricing tiers  
-- Market outliers  
+- Market outliers
+
+![4](https://github.com/user-attachments/assets/f7b55b00-c930-4782-bd7f-2a84783172e9)
+
 
 ---
 
@@ -90,7 +105,10 @@ Visual breakdown of property categories:
 - Entire homes  
 - Private rooms  
 - Shared spaces  
-- Apartments, studios, etc.  
+- Apartments, studios, etc.
+
+![5](https://github.com/user-attachments/assets/23d6baf7-e1ff-4245-8fc1-b0bfc6b49fe4)
+
 
 ---
 
@@ -98,7 +116,10 @@ Visual breakdown of property categories:
 Box plot showing:
 - Monthly reviews as a booking activity indicator  
 - Typical engagement levels  
-- Outlier listings with high customer activity  
+- Outlier listings with high customer activity
+
+![9](https://github.com/user-attachments/assets/d8351e6e-6286-4960-9f17-23ed769c3d82)
+
 
 ---
 
@@ -112,6 +133,9 @@ Provides a snapshot of selected city insights:
 _Example_:  
 Albany has an average price of **$111** and ~**2 reviews/month** → **Moderate activity**.
 
+![7](https://github.com/user-attachments/assets/e28c1722-503b-4bb8-94cf-905256d58d74)
+
+
 ---
 
 ## 🤖 6. Personalized AI Recommendation
@@ -121,6 +145,9 @@ AI tool that generates hosting advice based on:
 - Hosting experience  
 
 Helps users make smarter hosting decisions.
+
+![10](https://github.com/user-attachments/assets/15d7667f-9ddb-43b0-88cd-10f536067111)
+
 
 ---
 
