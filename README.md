@@ -131,14 +131,3 @@ Helps users make smarter hosting decisions.
 - **Rana Ehab**  
 - **Mohamed Mosad**
 
----
-
-## 📎 Want Extras?
-If needed, I can generate:
-
-- 📄 A styled PDF version  
-- 🎤 A complete PowerPoint presentation  
-- 📁 A suggested GitHub folder structure  
-- 🧩 A project logo / cover image  
-
-Just tell me!
